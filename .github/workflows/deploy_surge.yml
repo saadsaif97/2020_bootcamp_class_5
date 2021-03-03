@@ -29,7 +29,8 @@ jobs:
       - name: Install surge
         run: npm install -g surge
       - name: Install packages
-        run: npm install
+        # clean install for our vm
+        run: npm ci
       - name: Build command
         run: npm run build
       - name: Deploy to surge
